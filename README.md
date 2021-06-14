@@ -21,8 +21,7 @@ For more information please see [recommended Amazon Elasticache Memcached Alarms
 ```hcl
 # Simple usage example
 module "elasticache_alarms" {
-  # TODO: Move this to github-ed OSS module
-  source           = "../../../../../../Projects/terraform-aws-elasticache-memcached-alarms/"
+  source  = "github.com/DevOps-Nirvana/terraform-aws-elasticache-memcached-alarms?ref=main"
   
   # Our cache cluster name (todo: manage in TF instead of manual)
   cache_cluster_id = "TestCluster"
@@ -43,8 +42,9 @@ You can also customize various parts of this module, all possible options are li
 
 ```hcl
 module "elasticache_alarms" {
-  # TODO: Move this to github-ed OSS module
-  source = "../../../../../../Projects/terraform-aws-elasticache-memcached-alarms/"
+  source = "github.com/DevOps-Nirvana/terraform-aws-elasticache-memcached-alarms?ref=main"
+  
+  # Add a prefix to all alarms
   prefix = "myprefix-"
   
   # Our cache cluster name (todo: manage in TF instead of manual)
