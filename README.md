@@ -108,4 +108,4 @@ File a [GitHub issue](https://github.com/DevOps-Nirvana/terraform-aws-elasticach
 
 ## License
 
-todo
+Using [MIT License](./LICENSE)
