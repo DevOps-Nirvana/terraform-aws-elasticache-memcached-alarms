@@ -12,6 +12,12 @@ variable "prefix" {
   default     = ""
 }
 
+variable "suffix" {
+  type        = string
+  description = "(optional) Alarm Name Suffix"
+  default     = ""
+}
+
 variable "sns_topic_alarm_arns" {
   type        = list
   default     = []
@@ -28,6 +34,12 @@ variable "tags" {
   type        = map(string)
   default     = {}
   description = "Tags to attach to each alarm"
+}
+
+variable "dimensions" {
+  type        = map(string)
+  default     = {}
+  description = "The extra dimensions to apply for the alarms"
 }
 
 
